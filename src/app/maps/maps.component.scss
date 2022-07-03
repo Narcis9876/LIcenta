@@ -1,0 +1,44 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.mare {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    .buttondiv {
+        display: flex;
+        margin-top: 3vh;
+        justify-content: center;
+        .btndiv {
+            margin-bottom: 2rem;
+            margin-left: 2rem;
+            .aa {
+                width: 17rem;
+                font-size: 1.7rem;
+            }
+        }
+    }
+    .my-google-map {
+        display: flex;
+        justify-content: center;
+        .map-container {
+            width: 75vw;
+            height: 82vh;
+            border-radius: 6%;
+        }
+    }
+}
+
+.all {
+    background-image: linear-gradient(to right bottom, hsla(62, 79%, 66%, 0.8), hsla(77, 28%, 79%, 0.8)), url("https://media.bzi.ro/unsafe/1060x600/smart/filters:contrast(3):format(jpeg):blur(1):quality(80)/http://www.bzi.ro/wp-content/uploads/1/164/FEAA.jpg");
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}

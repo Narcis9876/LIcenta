@@ -1,0 +1,43 @@
+<app-header>
+
+</app-header>
+<img id="imagine" src="../../assets/imgbbb.jpg" alt="">
+<div class="all">
+
+
+    <div *ngIf="!winner" class="currentPlayer">
+        <h1 style="color:rgb(0, 0, 0) ; font-weight: 800;">Jucatorul curent: <span>{{ player }}</span> </h1>
+    </div>
+
+
+
+    <div *ngIf="winner" class="currentPlayer">
+
+        <h1 style="color:rgb(0, 0, 0) ; font-weight: 800;" *ngIf="winner=='X'">
+            Jucatorul cu <span style="color:blue; font-weight: 900;
+            font-size: 4rem; ">{{ winner }}</span> a castigat!
+        </h1>
+        <h1 style="color:rgb(0, 0, 0) ; font-weight: 900;
+        font-size: 4rem; " *ngIf="winner=='O'">
+            Jucatorul cu <span style="color:#aa0b0b;">{{ winner }}</span> a castigat!
+        </h1>
+    </div>
+
+
+    <div class="game">
+        <main>
+
+            <app-square *ngFor="let val of squares; let i = index" [value]=val (click)="makeMove(i)">
+
+            </app-square>
+        </main>
+    </div>
+    <div>
+        <li routerLinkActive="active"> <a (click)="newGame()" class="btn btn-white">Incepe un joc nou</a></li>
+
+    </div>
+</div>
+<div style="margin-top: .5rem;">
+
+    <app-footer></app-footer>
+</div>

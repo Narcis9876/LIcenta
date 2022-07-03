@@ -1,0 +1,20 @@
+<div class="footer">
+    Licenta 💥 {{ year }}
+</div>
+<div>
+    🕓 {{dateTime |async | date:'HH:mm'}}
+</div>
+<div class="box">
+
+    <div>
+
+        {{ wheather?.name}}
+        <img class="imag" [src]="url" alt="imag">
+
+        <div>
+
+            {{wheather?.main.temp-273.15| number : '1.0-0'}} °C
+        </div>
+
+    </div>
+</div>

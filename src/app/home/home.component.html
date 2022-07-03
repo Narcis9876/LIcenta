@@ -1,0 +1,51 @@
+<div>
+    <video autoplay muted loop id="myVideo">
+    <source src="../../assets/backvideo.mp4" type="video/mp4">
+
+  </video>
+</div>
+<app-header></app-header>
+<div class="top-section">
+    <div style="margin-top:4rem;">
+        {{dateTime |async | date:'HH:mm:ss'}}
+    </div>
+    <div style="font-size:4rem;">
+        {{dateTime |async | date:'d MMMM'}}
+    </div>
+</div>
+<div class="title">
+    Bine ați venit pe pagina noastră
+</div>
+<div class="a">
+
+
+    <div class="center">
+        <div class="page">
+            <h1> <img style="width:5vw" src="../../assets/imag/logo_transparent.png" alt=""></h1>
+            <p> 4Studs reprezintă o aplicație destinată studenților de la Informatică-Economică, dezvoltată în cadrul lucrării de licență.
+            </p>
+            <div>
+
+                <div class="div">
+                    <div>© Duda Narcis</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="map">
+
+    <div class="inmap">
+        <span style="font-size:2vw ;">Nu gasesti facultatea?</span>
+        <div style="margin-top:9vh;">
+            <li routerLinkActive="active"> <a routerLink="/4Studs/map" class="btn btn-white">Mergi la StudsMap</a></li>
+        </div>
+
+    </div>
+</div>
+<div class="footer">
+
+    <app-footer></app-footer>
+</div>

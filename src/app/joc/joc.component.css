@@ -1,0 +1,67 @@
+#imagine {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 1;
+    z-index: -1;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 10vw 10vw 10vw;
+    grid-gap: 0px;
+}
+
+app-square {
+    margin-left: 10px;
+    margin: 1px;
+    height: 20vh;
+}
+
+.all {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.game {
+    position: relative;
+    left: 30%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 40%;
+    margin-bottom: 3rem;
+    background-color: transparent;
+    padding: 2rem 0;
+    border-radius: 30px;
+}
+
+.currentPlayer {
+    margin-top: -9rem;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+    animation: none;
+}
+
+.btn-white {
+    background-color: #aa0b0b;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 3rem;
+    display: inline-block;
+    border-radius: 30%;
+    transition: all .2s;
+    font-size: 1.6rem;
+}
+
+li {
+    list-style-type: none;
+}

@@ -1,0 +1,42 @@
+<div class="all">
+    <app-header>
+    </app-header>
+
+    <h1 style="text-align: center; margin-bottom: 5vh;">Map for students</h1>
+
+    <div class="mare">
+
+        <div class="buttondiv">
+
+            <div class="btndiv">
+                <button disabled="{{findAt}}" class="aa" mat-raised-button color="{{findFac? 'accent':'primary'}}" (click)="findFeaa()"> {{findFac? 'Ascunde facultatea': 'Gaseste facultatea'}} </button>
+            </div>
+
+            <div class="btndiv">
+                <button disabled="{{findFac}}" class='aa' mat-raised-button color="{{findAt? 'accent':'primary'}}" (click)="findAtr()"> {{findAt? 'Ascunde atractii': 'Gaseste atractii'}} </button>
+            </div>
+
+            <div class="btndiv">
+                <button disabled="{{findFac}}" class='aa' mat-raised-button color="{{findAt? 'accent':'primary'}}" (click)="findAtr()"> {{findAt? 'Ascunde atractii': 'Gaseste atractii'}} </button>
+            </div>
+        </div>
+
+        <div class="my-google-map">
+            <google-map [width]="null" [height]="null" [options]="mapOptions">
+
+
+
+                <map-marker *ngFor="let marker of markers" [position]="marker.position" [title]="marker.title" [options]="marker.options" [icon]="marker.icon">
+
+                </map-marker>
+
+
+            </google-map>
+
+        </div>
+
+    </div>
+
+
+    <app-footer></app-footer>
+</div>

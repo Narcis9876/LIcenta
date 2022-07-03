@@ -1,0 +1,25 @@
+#aa {
+    width: 100vw;
+    border-radius: 15px;
+}
+
+.leave {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header {
+    display: flex;
+}
+
+.imag {
+    width: 10rem;
+    border-radius: 25px;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+.footer {
+    position: relative;
+    top: 5.5rem;
+}

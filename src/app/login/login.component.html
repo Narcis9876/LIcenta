@@ -1,0 +1,120 @@
+<!-- <div class="row">
+    <div class="col-xs-12 col-md-6 coll-md-offset-3">
+        <div class="alert alert-danger" *ngIf="error">
+            {{error}}
+        </div>
+
+        <form #auth="ngForm" (ngSubmit)="onSubmit(auth)">
+            <div class="form-group">
+                <label for="email">E-maill</label>
+                <input type="email" id="email" class="form-control" ngModel name="email" required email>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control" ngModel name="password" required minlength="6">
+            </div>
+            <div>
+                <button class="btn btn-primary" type="submit" [disabled]="!auth.valid"> {{isLoginMode ? 'Login' : 'Sign Up'}} </button> ||
+
+
+                <button class="btn btn-primary" (click)="onSwitchMode()" type="button">Switch to {{isLoginMode ? 'Sign up': 'Login'}} </button>
+            </div>
+        </form>
+    </div>
+</div> -->
+
+<div class="login-root">
+    <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+        <div class="loginbackground box-background--white padding-top--64">
+            <div class="loginbackground-gridContainer">
+                <div class="box-root flex-flex" style="grid-area: top / start / 8 / end;">
+                    <div class="box-root" style="background-image: linear-gradient(white 0%, rgb(247, 250, 252) 33%); flex-grow: 1;">
+                    </div>
+                </div>
+                <div class="box-root flex-flex" style="grid-area: 4 / 2 / auto / 5;">
+                    <div class="box-root box-divider--light-all-2 animationLeftRight tans3s" style="flex-grow: 1;"></div>
+                </div>
+                <div class="box-root flex-flex" style="grid-area: 6 / start / auto / 2;">
+                    <div class="box-root box-background--blue800" style="flex-grow: 1;"></div>
+                </div>
+                <div class="box-root flex-flex" style="grid-area: 7 / start / auto / 4;">
+                    <div class="box-root box-background--blue animationLeftRight" style="flex-grow: 1;"></div>
+                </div>
+                <div class="box-root flex-flex" style="grid-area: 8 / 4 / auto / 6;">
+                    <div class="box-root box-background--gray100 animationLeftRight tans3s" style="flex-grow: 1;"></div>
+                </div>
+                <div class="box-root flex-flex" style="grid-area: 2 / 15 / auto / end;">
+                    <div class="box-root box-background--cyan200 animationRightLeft tans4s" style="flex-grow: 1;"></div>
+                </div>
+                <div class="box-root flex-flex" style="grid-area: 3 / 14 / auto / end;">
+                    <div class="box-root box-background--blue animationRightLeft" style="flex-grow: 1;"></div>
+                </div>
+                <div class="box-root flex-flex" style="grid-area: 4 / 17 / auto / 20;">
+                    <div class="box-root box-background--gray100 animationRightLeft tans4s" style="flex-grow: 1;"></div>
+                </div>
+                <div class="box-root flex-flex" style="grid-area: 5 / 14 / auto / 17;">
+                    <div class="box-root box-divider--light-all-2 animationRightLeft tans3s" style="flex-grow: 1;"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="aaa" class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+
+            <div class="formbg-outer">
+
+                <div class="formbg">
+
+
+                    <div class="formbg-inner padding-horizontal--48">
+                        <div class="loginH">
+                            <h1>
+                                <mat-icon style="font-size: 3rem;">lock</mat-icon> {{isLoginMode ? 'Conectează-te': 'Înregistrează-te'}}
+
+                            </h1>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6 coll-md-offset-3">
+                                <div class="alert alert-danger" *ngIf="error">
+                                    {{error}}
+                                </div>
+                                <br>
+                                <form #auth="ngForm" (ngSubmit)="onSubmit(auth)">
+                                    <div class="form-group">
+                                        <label for="email">E-maill</label>
+                                        <input type="email" id="email" class="form-control" ngModel name="email" required email>
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input type="password" id="password" class="form-control" ngModel name="password" required minlength="6">
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div>
+                                        <button style="font-size:2rem ;" class="btn btn-primary" type="submit" [disabled]="!auth.valid"> <mat-icon style="font-size:2rem ;
+                                          position: relative; top:4px ;">lock_open</mat-icon> {{isLoginMode ? 'Conectare' : 'Înregistrare'}} </button> ||
+
+
+                                        <button style="font-size:2rem ;" class="btn btn-primary" (click)="onSwitchMode()" type="button">Mergi la {{isLoginMode ? 'Înregistrare': 'Conectare'}} </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="already">
+                <span style=" margin-right: 3rem; margin-top: 1.9rem; ">Esti deja conectat? </span>
+                <span>
+
+                  <li routerLinkActive="active"> <a routerLink="/home" class="btn btn-white">Click aici <mat-icon style="position: relative; top:4px ;">lock_open</mat-icon></a></li>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

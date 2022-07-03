@@ -1,0 +1,96 @@
+<div class="all">
+
+
+
+    <div *ngIf="!view">
+        <video autoplay [muted]="false" id="myVideo">
+<source src="../../../assets/vvv.mp4" type="video/mp4">
+Your browser does not support HTML5 video.
+</video>
+    </div>
+
+
+    <div *ngIf="!view" class="forbuton">
+        <div>
+
+            <li routerLinkActive="active"> <a (click)="allPosts()" class="btn btn-white">Vezi toate anunturile</a></li>
+        </div>
+    </div>
+
+
+
+
+    <div style="margin-top:5rem ;" *ngIf="view" class="container">
+        <div class="container__item">
+            <div class="form">
+
+                <input type="email" class="form__field" [(ngModel)]="listFilter" placeholder="Introdu numele cartii">
+
+                <button type="button" class="btn btn--primary btn--inside uppercase">Filtrare</button>
+                <br>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="forbuton1" *ngIf="!filteredProducts.length && view">
+
+
+
+        <div style="font-size: 3rem;"> Error 404: <span style="color: hsl(0, 88%, 35%);">{{listFilter}}</span> nu exista</div>
+        <div style="margin-top: 5rem; margin-left:5rem">
+
+            <li routerLinkActive="active"> <a (click)="allPosts()" class="btn btn1-white">Vezi toate anunturile</a></li>
+        </div>
+
+    </div>
+
+    <div *ngIf="view" class="view">
+
+        <div class="fora" *ngFor="let item of filteredProducts">
+
+            <div class="infora">
+
+                <div class="page1">
+
+
+                    <div class="forImg">
+                        <img class="imag" src="../../../assets/imag/carte.jpg" alt="">
+
+                    </div>
+
+                    <div class="nume">
+                        {{item.denumire}}
+                    </div>
+
+                    <div class="ahd">
+
+                        <div>
+
+                            Pret:{{item.valoare}} lei
+                        </div>
+                        <div>
+                            Descriere: {{item.descriere}}
+                        </div>
+                    </div>
+                    <div class="ahd">
+                        Contact:
+                        <div class="contact">
+                            <div>
+
+
+                                <mat-icon> contact_mail</mat-icon> {{item.email}}
+                            </div>
+                            <div>
+                                <mat-icon> contact_phone</mat-icon> {{item.numar}}
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

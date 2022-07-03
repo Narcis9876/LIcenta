@@ -1,0 +1,79 @@
+<div class="allFrom">
+    <div class="iamgine">
+        <img class="imgg" src="../../../assets/imag/bookPhoto.png" alt="">
+    </div>
+
+    <div class="form">
+        <div class="header">
+            <h1>{{!clicked? 'Vrei sa adaugi un anunț?' : 'Adaugă un anunț'}}
+
+
+                <mat-icon style=" color: #aa0b0b; font-size: 40px;">collections_bookmark</mat-icon>
+
+            </h1>
+        </div>
+        <div *ngIf="!clicked" class="forbuton">
+            <div>
+
+                <li routerLinkActive="active"> <a (click)="onClick()" class="btn btn-white">Click aici</a></li>
+            </div>
+        </div>
+        <div *ngIf="clicked" class="row">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-offset-2">
+                <form (ngSubmit)="storePost()" #f="ngForm">
+                    <div id="user-data">
+                        <div class="form-group">
+                            <label for="Nume">Denumire</label>
+                            <input type="text" id="denumire" class="form-control" ngModel name="denumire" required #denumire="ngModel">
+                        </div>
+                        <div class="form-group">
+                            <label for="Valoare">Pret</label>
+                            <input type="number" id="valoare" class="form-control" ngModel name="valoare" required #pret="ngModel">
+                        </div>
+                        <div class="form-group">
+                            <label for="Valoare">Descriere</label>
+                            <textarea name="descriere" id="" cols="30" rows="5" ngModel required #descriere="ngModel"></textarea>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="upload">Incarca o fotografie</label>
+                            <input required="false" type="file" (change)="onFileSelected($event)">
+                        </div>
+                        <div class="imag">
+
+                            <div>
+
+                                <img class="imagine" [src]="url" *ngIf="url">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="info">Informatii de contact:</label>
+                        </div>
+                        <div class="contactInfo">
+
+                            <div class="form-group">
+                                <label for="contact">Adresa mail</label>
+                                <input type="email" id="contact" class="form-control" ngModel name="contact" required #contact="ngModel">
+                            </div>
+                            <div class="form-group">
+                                <label for="numar">Numar de telefon</label>
+                                <input type="tel" id="numar" class="form-control" ngModel name="numar" required #numar="ngModel">
+                            </div>
+                        </div>
+
+                    </div>
+                    <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Adauga</button>
+
+                </form>
+
+                <div class="imag" *ngIf="msg">{{msg}} </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="svg">
+        <img class="svgimag" src="../../../assets/undraw_save_to_bookmarks_re_8ajf.svg" alt="">
+    </div>
+
+
+</div>

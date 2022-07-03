@@ -1,0 +1,70 @@
+<div class="all">
+    <div class="header">
+        <div class="time">
+            🕓{{dateTime |async | date:'HH:mm'}}
+        </div>
+        <div class=" box">
+
+            <span>
+            {{ wheather?.name}}
+          </span>
+
+
+            <div class="head">
+                <div>
+                    {{wheather?.main.temp-273.15| number : '1.0-0'}} °C <img class="imag" [src]="url" alt="imag">
+                </div>
+                <div class="inhead">
+                    <img style="width:15rem ;" src="../../assets/undraw_map_re_60yf.svg" alt="">
+                </div>
+            </div>
+
+
+        </div>
+        <div class="btnHome">
+            <li routerLinkActive="active"> <a routerLink="/home" class="btn btn-white">Back to Home</a></li>
+
+        </div>
+    </div>
+
+    <div class="mare">
+
+        <div class="mapa">
+
+            <!-- <div>
+                <img style="margin-top:5vh ; margin-left: 20vw;" src="https://media0.giphy.com/media/kEKL3OVKkzZVREDwGZ/giphy.gif?cid=6c09b952lq727qnb4vm49x9frde8jcgab3qux53662g5df2p&rid=giphy.gif&ct=s" alt="">
+            </div> -->
+            <div class="aa">
+                <div class="map-container">
+                    <div class="map-frame">
+                        <div id="map"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="buttondiv">
+
+            <div class="btndiv">
+                <button mat-raised-button color="primary" (click)="gasesteLocatia()" class='buttonC'><mat-icon>my_location</mat-icon> Locatia curenta</button><br>
+            </div>
+
+
+            <div class="btndiv">
+                <button mat-raised-button color="primary" (click)="feaa()" class='buttonC' disabled="{{!clicked}}"><mat-icon> directions</mat-icon>  Gaseste facultatea</button><br>
+            </div>
+            <div class="btndiv">
+
+                <button mat-raised-button color="primary" (click)="gasesteCaminul()" class="buttonC" disabled="{{!clicked}}"><mat-icon> directions</mat-icon> Gaseste caminul</button>
+            </div>
+
+            <div class="btndiv">
+
+                <button mat-raised-button color="accent" (click)="retry()" class="buttonC"><mat-icon>update</mat-icon> Refresh</button>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>

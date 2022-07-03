@@ -1,0 +1,89 @@
+<div>
+    <div class="all">
+
+        <div>
+            <video autoplay muted loop id="myVideo">
+    <source src="../../assets/backProf.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+        </div>
+
+        <app-header></app-header>
+
+        <div style="margin-top: 20rem;">
+
+            <div class="container">
+                <div class="container__item">
+                    <div class="form">
+
+                        <input type="email" class="form__field" [(ngModel)]="listFilter" placeholder="Introdu numele profesorului">
+
+                        <button type="button" class="btn btn--primary btn--inside uppercase">Filtrare</button>
+                        <br>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="notprofFor">
+                <div class="notprof" *ngIf="!filteredProducts.length">
+                    <div class="pageNot">
+
+
+                        <div> Error 404: <span style="color: hsl(0, 88%, 35%);">{{listFilter}}</span> nu exista</div>
+
+                        <div>
+                            <img src="https://t3.ftcdn.net/jpg/04/21/05/80/360_F_421058012_TsV76QVuJhignu12Ei9VHpeWDWjHmeA6.jpg" style="height: 150px; width: 170px; border-radius: 25px;">
+                        </div>
+                        <div style="margin-top:5rem;">
+                            <li routerLinkActive="active"> <a (click)="allProf()" class="btnoas btn-white">Afiseaza toti profesorii</a></li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prof">
+
+                <div class="for" *ngFor="let item of filteredProducts">
+
+                    <div class="infor">
+
+                        <div class="page">
+
+
+
+                            <div (click)="gotProf()" class="nume">
+
+                                <i style="color:rgb(190, 106, 106);" class="glyphicon glyphicon-user"></i> {{item.nume}}
+                            </div>
+
+                            <div class="ahd">
+
+                                <div>
+
+                                    <i style="color:red;" class="glyphicon glyphicon-map-marker"></i> {{item.cabinet}}
+                                </div>
+                                <div>
+                                    <i style="color:blue;" class="glyphicon glyphicon-envelope"></i> {{item.mail}}
+                                </div>
+                            </div>
+
+                            <div class="imgclass">
+
+                                <img class="img" [src]="item.img" alt="imagine">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="footer">
+            <app-footer></app-footer>
+        </div>
+
+    </div>
+</div>

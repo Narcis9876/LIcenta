@@ -1,0 +1,123 @@
+.form {
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imag {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    color: red;
+}
+
+.imagine {
+    text-align: center;
+    margin-top: 2rem;
+    width: 10vw;
+    border-radius: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+     :hover {
+        transform: translateY(-3px);
+    }
+}
+
+.row {
+    background-color: rgb(242, 242, 240);
+    padding: 3rem;
+    padding-left: 16.9rem;
+    padding-right: 17.5rem;
+    border-radius: 35px;
+}
+
+.contactInfo {
+    padding: 2rem;
+    border: 1px solid rgb(7, 85, 255);
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+.row:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.3);
+}
+
+.allFrom {
+    display: flex;
+    margin-top: 4rem;
+    margin-left: 5%;
+    margin-bottom: -3.7rem;
+}
+
+.imagine {
+    margin-left: 10%;
+}
+
+.imgg {
+    border-radius: 35px;
+    width: 35vw;
+}
+
+.svgimag {
+    width: 20rem;
+    position: relative;
+    left: 25%;
+    top: 12%;
+    border-radius: 15px;
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.3);
+    }
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 3rem;
+    display: inline-block;
+    border-radius: 30%;
+    transition: all .2s;
+    font-size: 1.6rem;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+    animation: none;
+}
+
+.btn:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.btn-white {
+    background-color: #aa0b0b;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 3rem;
+    display: inline-block;
+    border-radius: 30%;
+    transition: all .2s;
+    font-size: 1.6rem;
+}
+
+li {
+    list-style-type: none;
+}
+
+.forbuton {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
